@@ -21,6 +21,10 @@ if (0) {
   atrain.sampled <- sample(nrow(airt), nrow(airt)/2)
   atrain <- airt[atrain.sampled]
   atest <- airt[!atrain.sampled]
+  if (!setequal(union(atest$id, atrain$id), airt$id)) {
+    stop("ERROR: The test and training datasets don't add up to the original dataset")
+  }
+
   print("Saving training and test data sets")
   save(atest, file=sprintf("%s/%s", script.dir, "atest.dat"))
   save(atrain, file=sprintf("%s/%s", script.dir, "atrain.dat"))
@@ -28,4 +32,7 @@ if (0) {
   print("Loading training and test data sets from binary storage. Note the atest and atrain variables will be OVERWRITTEN")
   load(file=sprintf("%s/%s", script.dir, "atrain.dat"))
   load(file=sprintf("%s/%s", script.dir, "atest.dat"))
+  if (length(intersect(atest$id, atrain$id)) > 0) {
+    stop("ERROR: The test and training datasets overlap")
+  }
 }
