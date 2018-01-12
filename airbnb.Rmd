@@ -22,9 +22,63 @@ if (1) {
   air <- read.csv("listings.csv", stringsAsFactors = TRUE)
 
   airt <- data.table(air)
+
+# Clean missing data in columns we plan to use
   airt[,review_scores_rating:=na.roughfix(review_scores_rating)]
   airt[,review_scores_accuracy:=na.roughfix(review_scores_accuracy)]
+  airt[,host_since_date:=na.roughfix(host_since_date)]  
+  airt[, host_response_time:=na.roughfix(host_response_time)]
+  airt[, host_response_rate:=na.roughfix(host_response_rate)]  
+  airt[, host_is_superhost:=na.roughfix(host_is_superhost)]
+  airt[, host_listings_count:=na.roughfix(host_listings_count)]
+  airt[, host_total_listings_count:=na.roughfix(host_total_listings_count)]
+  airt[, host_verifications:=na.roughfix(host_verifications)]
+  airt[, host_has_profile_pic:=na.roughfix(host_has_profile_pic)]
+  airt[, host_identity_verified:=na.roughfix(host_identity_verified)]
+  airt[, neighbourhood_cleansed:=na.roughfix(neighbourhood_cleansed)]
+  airt[, zipcode:=na.roughfix(zipcode)]
+  airt[, latitude:=na.roughfix(latitude)]
+  airt[, longitude:=na.roughfix(longitude)]
+  airt[, is_location_exact:=na.roughfix(is_location_exact)]
+  airt[, property_type:=na.roughfix(property_type)]
+  airt[, room_type:=na.roughfix(room_type)]
+  airt[, accommodates:=na.roughfix(accommodates)]
+  airt[, bathrooms:=na.roughfix(bathrooms)]
+  airt[, bedrooms:=na.roughfix(bedrooms)]
+  airt[, beds:=na.roughfix(beds)]
+  airt[, bed_type:=na.roughfix(bed_type)]
+  airt[, amenities:=na.roughfix(amenities)]
+  airt[, security_deposit:=na.roughfix(security_deposit)]
+  airt[, cleaning_fee:=na.roughfix(cleaning_fee)]
+  airt[, guests_included:=na.roughfix(guests_included)]
+  airt[, extra_people:=na.roughfix(extra_people)]
+  airt[, minimum_nights:=na.roughfix(minimum_nights)]
+  airt[, maximum_nights:=na.roughfix(maximum_nights)]
+  airt[, availability_30:=na.roughfix(availability_30)]
+  airt[, availability_60:=na.roughfix(availability_60)]
+  airt[, availability_90:=na.roughfix(availability_90)]
+  airt[, availability_365:=na.roughfix(availability_365)]
+  airt[, number_of_reviews:=na.roughfix(number_of_reviews)]
+  airt[, first_review:=na.roughfix(first_review)]
+  airt[, last_review:=na.roughfix(last_review)]
+  airt[, review_scores_rating:=na.roughfix(review_scores_rating)]  
+  airt[, review_scores_accuracy:=na.roughfix(review_scores_accuracy)]
+  airt[, review_scores_cleanliness:=na.roughfix(review_scores_cleanliness)]
+  airt[, review_scores_checkin:=na.roughfix(review_scores_checkin)]
+  airt[, review_scores_communication:=na.roughfix(review_scores_communication)]
+  airt[, review_scores_location:=na.roughfix(review_scores_location)]
+  airt[, review_scores_value:=na.roughfix(review_scores_value)]
+  airt[, instant_bookable:=na.roughfix(instant_bookable)]
+  airt[, is_business_travel_ready:=na.roughfix(is_business_travel_ready)]  
+  airt[, cancellation_policy:=na.roughfix(cancellation_policy)]
+  airt[, require_guest_profile_picture:=na.roughfix(require_guest_profile_picture)]
+  airt[, require_guest_phone_verification:=na.roughfix(require_guest_phone_verification)]
+  airt[, calculated_host_listings_count:=na.roughfix(calculated_host_listings_count)]
+  airt[, reviews_per_month:=na.roughfix(reviews_per_month)]
 
+  
+  
+# Splitting the Train and Test Data
   atrain.sampled <- sample(nrow(airt), nrow(airt)/2)
   atrain <- airt[atrain.sampled]
   atest <- airt[!atrain.sampled]
@@ -63,7 +117,7 @@ air_formula <- as.formula("price ~
     neighbourhood_cleansed +
     zipcode + latitude + longitude + is_location_exact + property_type +
     room_type + accommodates + bathrooms + bedrooms + beds +
-    bed_type + amenities + square_feet + security_deposit + cleaning_fee + guests_included +
+    bed_type + amenities + security_deposit + cleaning_fee + guests_included +
     extra_people + minimum_nights + maximum_nights +
     availability_30 + availability_60 + availability_90 +
     availability_365 + number_of_reviews +
