@@ -78,6 +78,19 @@ air.train_output <- atrain$price
 air.test <- model.matrix(air_formula, atest)[, -1]
 ```
 
+## Random Forest
+
+Run Random Forest algorithm over the training dataset.
+
+```{r prep_matrices, echo=TRUE}
+fit.rndfor <- randomForest( air.train_input, air.train_output, do.trace = 0,
+                            ntree = 100,
+                            sampsize = 1000)
+yhat.test.rndfor <- predict(fit.rndfor, air.test)
+rsq.rndfor <- mean((atest$price - yhat.test.rndfor) ^ 2)
+rsq.rndfor
+```
+
 ## To be deleted in Final Version: R Markdown
 
 This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
