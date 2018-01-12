@@ -1,0 +1,75 @@
+---
+title: "AirBnB analysis"
+author: "MK842 Team 2"
+date: "1/12/2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r setup2, echo=FALSE}
+library(bit64)
+library(data.table)
+library(ggplot2)
+library(scales)
+library(stringr)
+theme_set(theme_bw())
+
+if (0) {
+  print("Creating training and test data sets from a 50/50 split of the CSV")
+  air <- read.csv("listings.csv", stringsAsFactors = TRUE)
+
+  airt <- data.table(air)
+
+  atrain.sampled <- sample(nrow(airt), nrow(airt)/2)
+  atrain <- airt[atrain.sampled]
+  atest <- airt[!atrain.sampled]
+  if (!setequal(union(atest$id, atrain$id), airt$id)) {
+    stop("ERROR: The test and training datasets don't add up to the original dataset")
+  }
+
+  print("Saving training and test data sets")
+  save(atest, file=sprintf("%s/%s", script.dir, "atest.dat"))
+  save(atrain, file=sprintf("%s/%s", script.dir, "atrain.dat"))
+} else {
+  load(file="atrain.dat")
+  load(file="atest.dat")
+  if (length(intersect(atest$id, atrain$id)) > 0) {
+    stop("ERROR: The test and training datasets overlap")
+  }
+}
+```
+
+## Training and Test datasets
+```{r datasets, echo = TRUE}
+summary(atrain)
+summary(atest)
+```
+
+
+## To be deleted in Final Version: R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## To be deleted in Final Version: Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## To be deleted in Final Version: Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## To be deleted in Final Version: Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
