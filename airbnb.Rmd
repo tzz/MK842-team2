@@ -9,7 +9,7 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{r setup2, echo=FALSE}
+```{r setup2, message=FALSE, echo=FALSE}
 library(bit64)
 library(data.table)
 library(ggplot2)
