@@ -17,11 +17,13 @@ library(scales)
 library(stringr)
 theme_set(theme_bw())
 
-if (0) {
+if (1) {
   print("Creating training and test data sets from a 50/50 split of the CSV")
   air <- read.csv("listings.csv", stringsAsFactors = TRUE)
 
   airt <- data.table(air)
+  airt[,review_scores_rating:=na.roughfix(review_scores_rating)]
+  airt[,review_scores_accuracy:=na.roughfix(review_scores_accuracy)]
 
   atrain.sampled <- sample(nrow(airt), nrow(airt)/2)
   atrain <- airt[atrain.sampled]
@@ -42,10 +44,16 @@ if (0) {
 }
 ```
 
-## Training and Test datasets
+## Define and Massage Training and Test datasets
 ```{r datasets, echo=TRUE}
 atest[,host_since_date:=as.Date(host_since)]
 atrain[,host_since_date:=as.Date(host_since)]
+
+
+```
+
+## Define the formula
+```{r formula, echo=TRUE}
 
 air_formula <- as.formula("price ~
     host_since_date + host_response_time +
@@ -86,8 +94,8 @@ Run Random Forest algorithm over the training dataset.
 fit.rndfor <- randomForest( air.train_input, air.train_output, do.trace = 0,
                             ntree = 100,
                             sampsize = 1000)
-yhat.test.rndfor <- predict(fit.rndfor, air.test)
-rsq.rndfor <- mean((atest$price - yhat.test.rndfor) ^ 2)
+airhat.test.rndfor <- predict(fit.rndfor, air.test)
+rsq.rndfor <- mean((atest$price - airhat.test.rndfor) ^ 2)
 rsq.rndfor
 ```
 
