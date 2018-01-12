@@ -44,8 +44,8 @@ if (0) {
 
 ## Training and Test datasets
 ```{r datasets, echo=TRUE}
-atest[,host_since_date=as.Date(host_since)]
-atrain[,host_since_date=as.Date(host_since)]
+atest[,host_since_date:=as.Date(host_since)]
+atrain[,host_since_date:=as.Date(host_since)]
 
 air_formula <- as.formula("price ~
     host_since_date + host_response_time +
@@ -57,7 +57,7 @@ air_formula <- as.formula("price ~
     room_type + accommodates + bathrooms + bedrooms + beds +
     bed_type + amenities + square_feet + security_deposit + cleaning_fee + guests_included +
     extra_people + minimum_nights + maximum_nights +
-    has_availability + availability_30 + availability_60 + availability_90 +
+    availability_30 + availability_60 + availability_90 +
     availability_365 + number_of_reviews +
     first_review + last_review + review_scores_rating + review_scores_accuracy +
     review_scores_cleanliness + review_scores_checkin + review_scores_communication +
@@ -67,6 +67,16 @@ air_formula <- as.formula("price ~
     calculated_host_listings_count + reviews_per_month")
 ```
 
+## Build matrices for train and test
+
+Generate a training matrix and a test matrix from the training and test datasets, dropping the first column (`price`).
+
+```{r build_matrices, echo=TRUE}
+air.train_input <- model.matrix(air_formula, atrain)[, -1]
+air.train_output <- atrain$price
+
+air.test <- model.matrix(air_formula, atest)[, -1]
+```
 
 ## To be deleted in Final Version: R Markdown
 
