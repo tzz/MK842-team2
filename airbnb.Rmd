@@ -127,6 +127,16 @@ rsq.frommean <- mean((air.test_output-mean(air.test_output))^2)
 
 ```
 
+## Linear regression
+```{r}
+#fit model
+fit.lm <- lm(air_formula, atrain)
+
+yhat.test.lm <- predict(fit.lm)
+rsq.test.lm <- mean((air.test_output - yhat.test.lm)^2)
+rsq.test.lm
+```
+
 ## Ridge regression
 
 ```{r}
