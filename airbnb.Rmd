@@ -135,7 +135,8 @@ if (0) {
 airhat.test.rndfor <- predict(fit.rndfor, air.test)
 
 rsq.rndfor <- mean((atest$price - airhat.test.rndfor) ^ 2)
-rsq.rndfor
+rsq.frommean <- mean((atest$price-mean(atest$price))^2)
+print(sprintf("We got rsq %.2f and the prediction from the mean is %.2f", rsq.rndfor, rsq.frommean))
 ```
 
 ## To be deleted in Final Version: R Markdown
