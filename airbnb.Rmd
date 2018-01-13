@@ -189,9 +189,9 @@ if (0) {
 } else {
   load("models/rndfor.dat")
 }
-airhat.test.rndfor <- predict(fit.rndfor, air.test)
 
-rsq.rndfor <- mean((atest$price - airhat.test.rndfor) ^ 2)
+yhat.test.rndfor <- predict(fit.rndfor, air.test_input)
+rsq.rndfor <- mean((air.test_output - yhat.test.rndfor) ^ 2)
 
 print(sprintf("Random Forest: rsq %.2f and the prediction from the mean is %.2f", rsq.rndfor, rsq.frommean))
 ```
@@ -208,8 +208,8 @@ fit.btree <- gbm(air_formula, data = atrain, distribution = "gaussian",
                  n.trees = 100, interaction.depth = 2, shrinkage = 0.001)
 #Try different n.trees, interaction.depth, and shrinkage parameters. And, let’s compute an R2.
  
-yhat.btree <- predict(fit.btree, atest, n.trees = gbm.perf(fit.btree, plot.it = FALSE)) 
-rsq.btree <- mean((yhat.btree - air.test_output) ^ 2)
+yhat.test.btree <- predict(fit.btree, atest, n.trees = gbm.perf(fit.btree, plot.it = FALSE)) 
+rsq.btree <- mean((yhat.test.btree - air.test_output) ^ 2)
 
 print(sprintf("Boosting: rsq %.2f and the prediction from the mean is %.2f", rsq.btree, rsq.frommean))
 ```
