@@ -15,15 +15,72 @@ library(data.table)
 library(ggplot2)
 library(scales)
 library(stringr)
+library(readr)
+library(randomForest)
 theme_set(theme_bw())
 
-if (1) {
+if (0) {
   print("Creating training and test data sets from a 50/50 split of the CSV")
   air <- read.csv("listings.csv", stringsAsFactors = TRUE)
 
   airt <- data.table(air)
+
+  airt$price <- parse_number(airt$price)
+
+  airt[,host_since_date:=as.Date(host_since)]
+
+  air_columns <- c("host_since_date", "host_response_time", "host_response_rate", "host_is_superhost", "host_listings_count", "host_total_listings_count", "host_verifications", "host_has_profile_pic", "host_identity_verified", "neighbourhood_cleansed", "zipcode", "latitude", "longitude", "is_location_exact", "property_type", "room_type", "accommodates", "bathrooms", "bedrooms", "beds", "bed_type", "amenities", "square_feet", "security_deposit", "cleaning_fee", "guests_included", "extra_people", "minimum_nights", "maximum_nights", "availability_30", "availability_60", "availability_90", "availability_365", "number_of_reviews", "first_review", "last_review", "review_scores_rating", "review_scores_accuracy", "review_scores_cleanliness", "review_scores_checkin", "review_scores_communication", "review_scores_location", "review_scores_value", "instant_bookable", "is_business_travel_ready", "cancellation_policy", "require_guest_profile_picture", "require_guest_phone_verification", "calculated_host_listings_count", "reviews_per_month")
+
+  airt[,host_since_date:=na.roughfix(host_since_date)]
+  airt[,host_response_time:=na.roughfix(host_response_time)]
+  airt[,host_response_rate:=na.roughfix(host_response_rate)]
+  airt[,host_is_superhost:=na.roughfix(host_is_superhost)]
+  airt[,host_listings_count:=na.roughfix(host_listings_count)]
+  airt[,host_total_listings_count:=na.roughfix(host_total_listings_count)]
+  airt[,host_verifications:=na.roughfix(host_verifications)]
+  airt[,host_has_profile_pic:=na.roughfix(host_has_profile_pic)]
+  airt[,host_identity_verified:=na.roughfix(host_identity_verified)]
+  airt[,neighbourhood_cleansed:=na.roughfix(neighbourhood_cleansed)]
+  airt[,zipcode:=na.roughfix(zipcode)]
+  airt[,latitude:=na.roughfix(latitude)]
+  airt[,longitude:=na.roughfix(longitude)]
+  airt[,is_location_exact:=na.roughfix(is_location_exact)]
+  airt[,property_type:=na.roughfix(property_type)]
+  airt[,room_type:=na.roughfix(room_type)]
+  airt[,accommodates:=na.roughfix(accommodates)]
+  airt[,bathrooms:=na.roughfix(bathrooms)]
+  airt[,bedrooms:=na.roughfix(bedrooms)]
+  airt[,beds:=na.roughfix(beds)]
+  airt[,bed_type:=na.roughfix(bed_type)]
+  airt[,amenities:=na.roughfix(amenities)]
+  airt[,square_feet:=na.roughfix(square_feet)]
+  airt[,security_deposit:=na.roughfix(security_deposit)]
+  airt[,cleaning_fee:=na.roughfix(cleaning_fee)]
+  airt[,guests_included:=na.roughfix(guests_included)]
+  airt[,extra_people:=na.roughfix(extra_people)]
+  airt[,minimum_nights:=na.roughfix(minimum_nights)]
+  airt[,maximum_nights:=na.roughfix(maximum_nights)]
+  airt[,availability_30:=na.roughfix(availability_30)]
+  airt[,availability_60:=na.roughfix(availability_60)]
+  airt[,availability_90:=na.roughfix(availability_90)]
+  airt[,availability_365:=na.roughfix(availability_365)]
+  airt[,number_of_reviews:=na.roughfix(number_of_reviews)]
+  airt[,first_review:=na.roughfix(first_review)]
+  airt[,last_review:=na.roughfix(last_review)]
   airt[,review_scores_rating:=na.roughfix(review_scores_rating)]
   airt[,review_scores_accuracy:=na.roughfix(review_scores_accuracy)]
+  airt[,review_scores_cleanliness:=na.roughfix(review_scores_cleanliness)]
+  airt[,review_scores_checkin:=na.roughfix(review_scores_checkin)]
+  airt[,review_scores_communication:=na.roughfix(review_scores_communication)]
+  airt[,review_scores_location:=na.roughfix(review_scores_location)]
+  airt[,review_scores_value:=na.roughfix(review_scores_value)]
+  airt[,instant_bookable:=na.roughfix(instant_bookable)]
+  airt[,is_business_travel_ready:=na.roughfix(is_business_travel_ready)]
+  airt[,cancellation_policy:=na.roughfix(cancellation_policy)]
+  airt[,require_guest_profile_picture:=na.roughfix(require_guest_profile_picture)]
+  airt[,require_guest_phone_verification:=na.roughfix(require_guest_phone_verification)]
+  airt[,calculated_host_listings_count:=na.roughfix(calculated_host_listings_count)]
+  airt[,reviews_per_month:=na.roughfix(reviews_per_month)]
 
   atrain.sampled <- sample(nrow(airt), nrow(airt)/2)
   atrain <- airt[atrain.sampled]
@@ -33,8 +90,8 @@ if (1) {
   }
 
   print("Saving training and test data sets")
-  save(atest, file=sprintf("%s/%s", script.dir, "atest.dat"))
-  save(atrain, file=sprintf("%s/%s", script.dir, "atrain.dat"))
+  save(atest, file="atest.dat")
+  save(atrain, file="atrain.dat")
 } else {
   load(file="atrain.dat")
   load(file="atest.dat")
@@ -44,35 +101,10 @@ if (1) {
 }
 ```
 
-## Define and Massage Training and Test datasets
-```{r datasets, echo=TRUE}
-atest[,host_since_date:=as.Date(host_since)]
-atrain[,host_since_date:=as.Date(host_since)]
-
-
-```
-
 ## Define the formula
 ```{r formula, echo=TRUE}
 
-air_formula <- as.formula("price ~
-    host_since_date + host_response_time +
-    host_response_rate + host_is_superhost +
-    host_listings_count + host_total_listings_count + host_verifications +
-    host_has_profile_pic + host_identity_verified +
-    neighbourhood_cleansed +
-    zipcode + latitude + longitude + is_location_exact + property_type +
-    room_type + accommodates + bathrooms + bedrooms + beds +
-    bed_type + amenities + square_feet + security_deposit + cleaning_fee + guests_included +
-    extra_people + minimum_nights + maximum_nights +
-    availability_30 + availability_60 + availability_90 +
-    availability_365 + number_of_reviews +
-    first_review + last_review + review_scores_rating + review_scores_accuracy +
-    review_scores_cleanliness + review_scores_checkin + review_scores_communication +
-    review_scores_location + review_scores_value +
-    instant_bookable + is_business_travel_ready +
-    cancellation_policy + require_guest_profile_picture + require_guest_phone_verification +
-    calculated_host_listings_count + reviews_per_month")
+air_formula <- as.formula(paste0("price ~ ", paste(air_columns, sep=" ", collapse="+")))
 ```
 
 ## Build matrices for train and test
@@ -94,6 +126,7 @@ Run Random Forest algorithm over the training dataset.
 fit.rndfor <- randomForest( air.train_input, air.train_output, do.trace = 0,
                             ntree = 100,
                             sampsize = 1000)
+#save(fit.rndfor, file="rndfor-model.dat")
 airhat.test.rndfor <- predict(fit.rndfor, air.test)
 rsq.rndfor <- mean((atest$price - airhat.test.rndfor) ^ 2)
 rsq.rndfor
