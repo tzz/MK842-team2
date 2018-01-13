@@ -29,8 +29,6 @@ if (0) {
 
   airt[,host_since_date:=as.Date(host_since)]
 
-  air_columns <- c("host_since_date", "host_response_time", "host_response_rate", "host_is_superhost", "host_listings_count", "host_total_listings_count", "host_verifications", "host_has_profile_pic", "host_identity_verified", "neighbourhood_cleansed", "zipcode", "latitude", "longitude", "is_location_exact", "property_type", "room_type", "accommodates", "bathrooms", "bedrooms", "beds", "bed_type", "amenities", "square_feet", "security_deposit", "cleaning_fee", "guests_included", "extra_people", "minimum_nights", "maximum_nights", "availability_30", "availability_60", "availability_90", "availability_365", "number_of_reviews", "first_review", "last_review", "review_scores_rating", "review_scores_accuracy", "review_scores_cleanliness", "review_scores_checkin", "review_scores_communication", "review_scores_location", "review_scores_value", "instant_bookable", "is_business_travel_ready", "cancellation_policy", "require_guest_profile_picture", "require_guest_phone_verification", "calculated_host_listings_count", "reviews_per_month")
-
   airt[,host_since_date:=na.roughfix(host_since_date)]
   airt[,host_response_time:=na.roughfix(host_response_time)]
   airt[,host_response_rate:=na.roughfix(host_response_rate)]
@@ -104,6 +102,8 @@ if (0) {
 ## Define the formula
 ```{r formula, echo=TRUE}
 
+air_columns <- c("host_since_date", "host_response_time", "host_response_rate", "host_is_superhost", "host_listings_count", "host_total_listings_count", "host_verifications", "host_has_profile_pic", "host_identity_verified", "neighbourhood_cleansed", "zipcode", "latitude", "longitude", "is_location_exact", "property_type", "room_type", "accommodates", "bathrooms", "bedrooms", "beds", "bed_type", "amenities", "square_feet", "security_deposit", "cleaning_fee", "guests_included", "extra_people", "minimum_nights", "maximum_nights", "availability_30", "availability_60", "availability_90", "availability_365", "number_of_reviews", "first_review", "last_review", "review_scores_rating", "review_scores_accuracy", "review_scores_cleanliness", "review_scores_checkin", "review_scores_communication", "review_scores_location", "review_scores_value", "instant_bookable", "is_business_travel_ready", "cancellation_policy", "require_guest_profile_picture", "require_guest_phone_verification", "calculated_host_listings_count", "reviews_per_month")
+
 air_formula <- as.formula(paste0("price ~ ", paste(air_columns, sep=" ", collapse="+")))
 ```
 
@@ -128,6 +128,7 @@ fit.rndfor <- randomForest( air.train_input, air.train_output, do.trace = 0,
                             sampsize = 1000)
 #save(fit.rndfor, file="rndfor-model.dat")
 airhat.test.rndfor <- predict(fit.rndfor, air.test)
+
 rsq.rndfor <- mean((atest$price - airhat.test.rndfor) ^ 2)
 rsq.rndfor
 ```
