@@ -121,8 +121,43 @@ Generate a training matrix and a test matrix from the training and test datasets
 air.train_input <- model.matrix(air_formula, atrain)[, -1]
 air.train_output <- atrain$price
 
-air.test <- model.matrix(air_formula, atest)[, -1]
+air.test_input <- model.matrix(air_formula, atest)[, -1]
+air.test_output <- atest$price
 ```
+
+## Ridge regression
+
+```{r}
+fit.ridge <- cv.glmnet(air.train_input, air.train_output, alpha = 0, nfolds = 10)
+#set alpha = 0 invoke ridge regression
+
+yhat.test.ridge <- predict(fit.ridge, air.test_input, s = fit.ridge$lambda.min)
+rsq.test.ridge <- mean((air.test_output - yhat.test.ridge)^2)
+rsq.test.ridge
+```
+
+## Lasso regression
+
+```{r}
+fit.lasso <- cv.glmnet(air.train_input, air.train_output, alpha = 1, nfolds = 10)
+#set alpha = 1 invoke lasso
+
+yhat.test.lasso <- predict(fit.lasso, air.test_input, s = fit.lasso$lambda.min)
+rsq.test.lasso <- mean((air.test_output - yhat.test.lasso)^2)
+rsq.test.lasso
+```
+
+## Elastic net
+
+```{r}
+fit.elastic <- cv.glmnet(air.train_input, air.train_output, alpha = 0.5, nfolds = 10)
+#picking 0 < alpha < 1, for example set alpha = 0.5 to weigh lasso and ridge penalties equally
+
+yhat.test.elastic <- predict(fit.elastic, air.test_input, s = fit.elastic$lambda.min)
+rsq.test.elastic <- mean((air.test_output - yhat.test.elastic)^2)
+rsq.test.elastic
+```
+
 
 ## Random Forest
 
@@ -143,6 +178,23 @@ airhat.test.rndfor <- predict(fit.rndfor, air.test)
 rsq.rndfor <- mean((atest$price - airhat.test.rndfor) ^ 2)
 rsq.frommean <- mean((atest$price-mean(atest$price))^2)
 print(sprintf("We got rsq %.2f and the prediction from the mean is %.2f", rsq.rndfor, rsq.frommean))
+```
+
+## Boosted tree
+```{r}
+library(gbm)
+library(survival)
+library(lattice)
+library(splines)
+library(parallel)
+
+fit.btree <- gbm(air_formula, data = atrain, distribution = "gaussian", 
+                 n.trees = 100, interaction.depth = 2, shrinkage = 0.001)
+#Try different n.trees, interaction.depth, and shrinkage parameters. And, let’s compute an R2.
+ 
+yhat.btree <- predict(fit.btree, atest, n.trees = gbm.perf(fit.btree, plot.it = FALSE)) 
+rsq.btree <- mean((yhat.btree - air.test_output) ^ 2)
+rsq.btree
 ```
 
 ## Plotting the Trees of the Random Forest
