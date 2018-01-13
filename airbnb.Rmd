@@ -123,10 +123,15 @@ air.test <- model.matrix(air_formula, atest)[, -1]
 Run Random Forest algorithm over the training dataset.
 
 ```{r prep_matrices, echo=TRUE}
-fit.rndfor <- randomForest( air.train_input, air.train_output, do.trace = 0,
-                            ntree = 100,
-                            sampsize = 1000)
-#save(fit.rndfor, file="rndfor-model.dat")
+if (0) {
+  fit.rndfor <- randomForest( air.train_input, air.train_output, do.trace = 0,
+                            importance = TRUE,
+                            keep.forest = TRUE,
+                            ntree = 200)
+  save(fit.rndfor, file="models/rndfor.dat")
+} else {
+  load("models/rndfor.dat")
+}
 airhat.test.rndfor <- predict(fit.rndfor, air.test)
 
 rsq.rndfor <- mean((atest$price - airhat.test.rndfor) ^ 2)
