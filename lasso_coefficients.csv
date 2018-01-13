@@ -1,0 +1,358 @@
+"","lasso.std_coefs"
+"host_since",0
+"host_response_timeN/A",37.6943529375071
+"host_response_timewithin a day",-64.3211012840661
+"host_response_timewithin a few hours",0
+"host_response_timewithin an hour",-10.898700590086
+"host_response_rate",-0.00122166319656162
+"host_is_superhostt",0
+"host_listings_count",-0.000215047624656156
+"host_total_listings_count",0
+"host_verifications['email', 'facebook', 'reviews']",1357.57290301831
+"host_verifications['email', 'linkedin', 'reviews', 'jumio', 'government_id', 'work_email']",NA
+"host_verifications['email', 'phone', 'amex', 'kba']",0
+"host_verifications['email', 'phone', 'amex', 'reviews', 'jumio', 'government_id']",0
+"host_verifications['email', 'phone', 'amex', 'reviews', 'jumio', 'kba', 'work_email']",-1137.31280546027
+"host_verifications['email', 'phone', 'amex', 'reviews', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual', 'work_email']",-578.80092710789
+"host_verifications['email', 'phone', 'amex', 'reviews', 'jumio', 'work_email']",0
+"host_verifications['email', 'phone', 'amex', 'reviews', 'jumio']",0
+"host_verifications['email', 'phone', 'amex', 'reviews', 'kba', 'work_email']",0
+"host_verifications['email', 'phone', 'amex', 'reviews', 'kba']",0
+"host_verifications['email', 'phone', 'facebook', 'amex', 'reviews', 'jumio', 'government_id']",NA
+"host_verifications['email', 'phone', 'facebook', 'amex', 'reviews', 'kba', 'work_email']",NA
+"host_verifications['email', 'phone', 'facebook', 'google', 'amex', 'reviews', 'jumio', 'government_id']",-2777.53449077724
+"host_verifications['email', 'phone', 'facebook', 'google', 'amex', 'reviews', 'jumio', 'offline_government_id', 'government_id']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'amex', 'reviews', 'jumio']",4547.96793694338
+"host_verifications['email', 'phone', 'facebook', 'google', 'amex', 'reviews', 'kba']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'amex', 'reviews', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'kba']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'linkedin', 'amex', 'reviews', 'jumio', 'kba']",-3821.28963707215
+"host_verifications['email', 'phone', 'facebook', 'google', 'linkedin', 'amex', 'reviews', 'jumio']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'linkedin', 'amex', 'reviews', 'kba', 'work_email']",NA
+"host_verifications['email', 'phone', 'facebook', 'google', 'linkedin', 'reviews', 'jumio', 'government_id', 'work_email']",NA
+"host_verifications['email', 'phone', 'facebook', 'google', 'linkedin', 'reviews', 'jumio', 'government_id']",1907.40280841987
+"host_verifications['email', 'phone', 'facebook', 'google', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'government_id']",NA
+"host_verifications['email', 'phone', 'facebook', 'google', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'linkedin', 'reviews', 'jumio', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'linkedin', 'reviews', 'jumio']",20.0337325515161
+"host_verifications['email', 'phone', 'facebook', 'google', 'linkedin', 'reviews', 'kba', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'reviews', 'jumio', 'kba', 'work_email']",NA
+"host_verifications['email', 'phone', 'facebook', 'google', 'reviews', 'jumio', 'offline_government_id', 'government_id', 'work_email']",NA
+"host_verifications['email', 'phone', 'facebook', 'google', 'reviews', 'jumio', 'offline_government_id', 'kba', 'government_id', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'reviews', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'reviews', 'jumio']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'reviews', 'kba', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'reviews', 'kba']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'reviews', 'selfie']",0
+"host_verifications['email', 'phone', 'facebook', 'google', 'reviews', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'jumio', 'government_id']",0
+"host_verifications['email', 'phone', 'facebook', 'jumio', 'kba']",NA
+"host_verifications['email', 'phone', 'facebook', 'jumio', 'offline_government_id', 'government_id', 'work_email']",NA
+"host_verifications['email', 'phone', 'facebook', 'jumio', 'offline_government_id', 'government_id']",0
+"host_verifications['email', 'phone', 'facebook', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",0
+"host_verifications['email', 'phone', 'facebook', 'jumio', 'work_email']",-1182.93693616098
+"host_verifications['email', 'phone', 'facebook', 'jumio']",0
+"host_verifications['email', 'phone', 'facebook', 'kba']",0
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'amex', 'reviews', 'jumio', 'government_id', 'work_email']",NA
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'amex', 'reviews', 'jumio', 'work_email']",NA
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'reviews', 'jumio', 'government_id', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'reviews', 'jumio', 'government_id']",0
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'government_id']",0
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'kba', 'government_id', 'work_email']",-26.8212878471473
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",NA
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'reviews', 'kba']",1780.96099808563
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'reviews', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'linkedin', 'reviews']",NA
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'government_id', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'government_id']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'kba', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'kba']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'offline_government_id', 'government_id', 'work_email']",653.60580086027
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'offline_government_id', 'government_id']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'offline_government_id', 'kba', 'government_id']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual', 'work_email']",-264.649463947408
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'selfie', 'government_id', 'identity_manual']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio', 'work_email']",-57.0163160790355
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'jumio']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'kba', 'work_email']",9.71690380593601
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'kba']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'manual_offline', 'jumio', 'work_email']",NA
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'manual_offline', 'jumio']",8342.89011698531
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'sesame', 'sesame_offline']",-532.412138319708
+"host_verifications['email', 'phone', 'facebook', 'reviews', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook', 'reviews']",53.8347311857035
+"host_verifications['email', 'phone', 'facebook', 'selfie']",-3577.11028489624
+"host_verifications['email', 'phone', 'facebook', 'work_email']",0
+"host_verifications['email', 'phone', 'facebook']",0
+"host_verifications['email', 'phone', 'google', 'amex', 'reviews', 'jumio', 'government_id']",0
+"host_verifications['email', 'phone', 'google', 'amex', 'reviews', 'kba', 'work_email']",NA
+"host_verifications['email', 'phone', 'google', 'amex', 'reviews', 'kba']",687.574471540721
+"host_verifications['email', 'phone', 'google', 'amex', 'reviews']",NA
+"host_verifications['email', 'phone', 'google', 'jumio', 'government_id']",NA
+"host_verifications['email', 'phone', 'google', 'kba']",NA
+"host_verifications['email', 'phone', 'google', 'linkedin', 'amex', 'reviews', 'jumio', 'government_id']",NA
+"host_verifications['email', 'phone', 'google', 'linkedin', 'amex', 'reviews', 'kba']",NA
+"host_verifications['email', 'phone', 'google', 'linkedin', 'reviews', 'jumio', 'government_id', 'work_email']",NA
+"host_verifications['email', 'phone', 'google', 'linkedin', 'reviews', 'jumio', 'government_id']",1233.47237822591
+"host_verifications['email', 'phone', 'google', 'linkedin', 'reviews', 'jumio', 'kba', 'government_id', 'work_email']",NA
+"host_verifications['email', 'phone', 'google', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'government_id']",0
+"host_verifications['email', 'phone', 'google', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual', 'work_email']",NA
+"host_verifications['email', 'phone', 'google', 'linkedin', 'reviews', 'jumio', 'work_email']",0
+"host_verifications['email', 'phone', 'google', 'linkedin', 'reviews', 'kba', 'work_email']",12693.9174738508
+"host_verifications['email', 'phone', 'google', 'linkedin', 'reviews', 'kba']",NA
+"host_verifications['email', 'phone', 'google', 'linkedin', 'reviews', 'work_email']",0
+"host_verifications['email', 'phone', 'google', 'reviews', 'jumio', 'government_id', 'work_email']",0
+"host_verifications['email', 'phone', 'google', 'reviews', 'jumio', 'government_id']",-61.5098546628164
+"host_verifications['email', 'phone', 'google', 'reviews', 'jumio', 'kba', 'government_id', 'work_email']",-3479.30155912167
+"host_verifications['email', 'phone', 'google', 'reviews', 'jumio', 'offline_government_id', 'government_id', 'work_email']",414.347956998722
+"host_verifications['email', 'phone', 'google', 'reviews', 'jumio', 'offline_government_id', 'government_id']",0
+"host_verifications['email', 'phone', 'google', 'reviews', 'jumio', 'offline_government_id', 'kba', 'government_id']",0
+"host_verifications['email', 'phone', 'google', 'reviews', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual']",-1661.1406749977
+"host_verifications['email', 'phone', 'google', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual', 'work_email']",0
+"host_verifications['email', 'phone', 'google', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",0
+"host_verifications['email', 'phone', 'google', 'reviews', 'jumio']",0
+"host_verifications['email', 'phone', 'google', 'reviews', 'kba', 'work_email']",0
+"host_verifications['email', 'phone', 'google', 'reviews', 'kba']",0
+"host_verifications['email', 'phone', 'google', 'reviews', 'work_email']",0
+"host_verifications['email', 'phone', 'google', 'reviews']",-1113.65331372384
+"host_verifications['email', 'phone', 'jumio', 'offline_government_id', 'government_id']",0
+"host_verifications['email', 'phone', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual']",-464.495926351517
+"host_verifications['email', 'phone', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual', 'work_email']",1240.38949547292
+"host_verifications['email', 'phone', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",1095.03469925188
+"host_verifications['email', 'phone', 'jumio', 'work_email']",1604.16934784625
+"host_verifications['email', 'phone', 'jumio']",473.237073539387
+"host_verifications['email', 'phone', 'kba']",180.249576702267
+"host_verifications['email', 'phone', 'linkedin', 'amex', 'reviews', 'jumio', 'government_id']",NA
+"host_verifications['email', 'phone', 'linkedin', 'amex', 'reviews', 'kba', 'work_email']",0
+"host_verifications['email', 'phone', 'linkedin', 'jumio', 'government_id']",0
+"host_verifications['email', 'phone', 'linkedin', 'jumio', 'offline_government_id', 'government_id']",0
+"host_verifications['email', 'phone', 'linkedin', 'kba', 'work_email']",NA
+"host_verifications['email', 'phone', 'linkedin', 'kba']",NA
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'government_id', 'work_email']",0
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'government_id']",0
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'kba', 'government_id']",0
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'government_id', 'work_email']",0
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'government_id']",0
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual', 'work_email']",0
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual']",NA
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual', 'work_email']",0
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",-358.133422197157
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'selfie', 'government_id', 'identity_manual', 'work_email']",-68.4466839231665
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio', 'selfie', 'government_id', 'identity_manual']",0
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'jumio']",-193.810933868674
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'kba', 'work_email']",NA
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'kba']",0
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'weibo', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",NA
+"host_verifications['email', 'phone', 'linkedin', 'reviews', 'work_email']",NA
+"host_verifications['email', 'phone', 'manual_offline', 'jumio']",0
+"host_verifications['email', 'phone', 'manual_online', 'facebook', 'reviews', 'manual_offline', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual', 'work_email']",0
+"host_verifications['email', 'phone', 'manual_online', 'facebook', 'reviews', 'manual_offline', 'jumio']",-1564.34561823349
+"host_verifications['email', 'phone', 'manual_online', 'reviews', 'jumio', 'government_id']",NA
+"host_verifications['email', 'phone', 'manual_online', 'reviews', 'manual_offline', 'jumio', 'kba']",0
+"host_verifications['email', 'phone', 'manual_online', 'reviews', 'manual_offline', 'jumio']",-1920.30543312022
+"host_verifications['email', 'phone', 'manual_online', 'reviews', 'manual_offline', 'kba']",0
+"host_verifications['email', 'phone', 'manual_online', 'reviews', 'manual_offline', 'work_email']",0
+"host_verifications['email', 'phone', 'manual_online', 'reviews', 'manual_offline']",NA
+"host_verifications['email', 'phone', 'manual_online', 'reviews']",NA
+"host_verifications['email', 'phone', 'reviews', 'government_id']",0
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'government_id', 'work_email']",-151.545897908109
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'government_id']",-10.1232700140988
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'kba', 'government_id', 'work_email']",0
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'kba', 'government_id']",0
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'kba', 'selfie', 'government_id', 'identity_manual']",0
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'kba', 'work_email']",-669.646586035785
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'kba']",0
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'offline_government_id', 'government_id', 'work_email']",0
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'offline_government_id', 'government_id']",-33.3179010067179
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'offline_government_id', 'kba', 'government_id', 'work_email']",NA
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'offline_government_id', 'kba', 'government_id']",0
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual', 'work_email']",0
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual']",1495.51738058051
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual', 'work_email']",0
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",61.5456903598729
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'selfie', 'government_id', 'identity_manual', 'work_email']",0
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'selfie', 'government_id', 'identity_manual']",NA
+"host_verifications['email', 'phone', 'reviews', 'jumio', 'work_email']",-91.2623636508134
+"host_verifications['email', 'phone', 'reviews', 'jumio']",0
+"host_verifications['email', 'phone', 'reviews', 'kba', 'selfie']",NA
+"host_verifications['email', 'phone', 'reviews', 'kba', 'work_email']",0.469626399977232
+"host_verifications['email', 'phone', 'reviews', 'kba']",0
+"host_verifications['email', 'phone', 'reviews', 'manual_offline', 'jumio', 'kba']",7560.52951225307
+"host_verifications['email', 'phone', 'reviews', 'manual_offline', 'jumio', 'work_email']",0
+"host_verifications['email', 'phone', 'reviews', 'manual_offline', 'jumio']",0
+"host_verifications['email', 'phone', 'reviews', 'manual_offline']",NA
+"host_verifications['email', 'phone', 'reviews', 'selfie']",0
+"host_verifications['email', 'phone', 'reviews', 'sent_id', 'work_email']",NA
+"host_verifications['email', 'phone', 'reviews', 'sent_id']",0
+"host_verifications['email', 'phone', 'reviews', 'sesame', 'sesame_offline']",0
+"host_verifications['email', 'phone', 'reviews', 'weibo', 'jumio', 'government_id']",-502.645080310113
+"host_verifications['email', 'phone', 'reviews', 'weibo', 'jumio']",0
+"host_verifications['email', 'phone', 'reviews', 'weibo', 'sesame', 'sesame_offline']",-4204.27644541822
+"host_verifications['email', 'phone', 'reviews', 'work_email']",-205.746162532031
+"host_verifications['email', 'phone', 'reviews']",62.978310129176
+"host_verifications['email', 'phone', 'weibo']",NA
+"host_verifications['email', 'phone', 'work_email']",5042.17159344867
+"host_verifications['email', 'phone']",129.517279963298
+"host_verifications['email', 'reviews', 'jumio', 'offline_government_id', 'government_id']",-4274.76369637566
+"host_verifications['email', 'reviews', 'jumio']",0
+"host_verifications['email', 'reviews', 'kba']",-1236.16036529662
+"host_verifications['email', 'reviews']",0
+"host_verifications['email']",173.642882187714
+"host_verifications['facebook', 'reviews', 'jumio']",NA
+"host_verifications['phone', 'facebook', 'google', 'reviews', 'jumio', 'government_id']",NA
+"host_verifications['phone', 'facebook', 'google', 'reviews']",0
+"host_verifications['phone', 'facebook', 'jumio', 'offline_government_id', 'government_id']",NA
+"host_verifications['phone', 'facebook', 'reviews', 'jumio', 'government_id']",NA
+"host_verifications['phone', 'facebook', 'reviews']",0
+"host_verifications['phone', 'facebook']",0
+"host_verifications['phone', 'google', 'linkedin', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",-8208.72313278058
+"host_verifications['phone', 'google']",NA
+"host_verifications['phone', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",NA
+"host_verifications['phone', 'jumio']",-1058.49524383296
+"host_verifications['phone', 'kba']",0
+"host_verifications['phone', 'reviews', 'jumio', 'government_id']",-3490.82551243286
+"host_verifications['phone', 'reviews', 'jumio', 'offline_government_id', 'government_id']",-410.486206685938
+"host_verifications['phone', 'reviews', 'jumio', 'offline_government_id', 'kba', 'selfie', 'government_id', 'identity_manual']",NA
+"host_verifications['phone', 'reviews', 'jumio', 'offline_government_id', 'selfie', 'government_id', 'identity_manual']",0
+"host_verifications['phone', 'reviews', 'jumio']",0
+"host_verifications['phone', 'reviews', 'kba', 'work_email']",315.481822195938
+"host_verifications['phone', 'reviews', 'kba']",0
+"host_verifications['phone', 'reviews']",0
+"host_verifications['phone']",0
+"host_verifications['reviews', 'jumio', 'work_email']",NA
+"host_verifications[]",NA
+"host_has_profile_pict",73.3956374803735
+"host_identity_verifiedt",-0.522600377582309
+"neighbourhood_cleansedBack Bay",168.307894965299
+"neighbourhood_cleansedBay Village",575.843184443772
+"neighbourhood_cleansedBeacon Hill",140.486142182773
+"neighbourhood_cleansedBrighton",0
+"neighbourhood_cleansedCharlestown",0
+"neighbourhood_cleansedChinatown",0
+"neighbourhood_cleansedDorchester",-84.9120524527311
+"neighbourhood_cleansedDowntown",139.192892260772
+"neighbourhood_cleansedEast Boston",-148.018418555037
+"neighbourhood_cleansedFenway",89.7571828034785
+"neighbourhood_cleansedHyde Park",0
+"neighbourhood_cleansedJamaica Plain",0
+"neighbourhood_cleansedLeather District",199.340409686575
+"neighbourhood_cleansedLongwood Medical Area",0
+"neighbourhood_cleansedMattapan",-346.727747583936
+"neighbourhood_cleansedMission Hill",-55.5374183272907
+"neighbourhood_cleansedNorth End",-14.1723264822205
+"neighbourhood_cleansedRoslindale",-147.549987540603
+"neighbourhood_cleansedRoxbury",-47.4037219037112
+"neighbourhood_cleansedSouth Boston",10.203226423903
+"neighbourhood_cleansedSouth Boston Waterfront",0
+"neighbourhood_cleansedSouth End",105.157531423126
+"neighbourhood_cleansedWest End",0
+"neighbourhood_cleansedWest Roxbury",0
+"zipcode02026",0
+"zipcode02108",0
+"zipcode02108 02111",0
+"zipcode02109",104.899371072333
+"zipcode02110",0
+"zipcode02111",275.971845065981
+"zipcode02113",0
+"zipcode02114",0
+"zipcode02115",-17.3862754892072
+"zipcode02116",43.8930742323128
+"zipcode02118",74.1614524920908
+"zipcode02119",0
+"zipcode02120",0
+"zipcode02121",-58.5211148941377
+"zipcode02122",-57.4337866291443
+"zipcode02124",0
+"zipcode02125",0
+"zipcode02126",0
+"zipcode02127",0
+"zipcode02128",0
+"zipcode02129",114.692653241001
+"zipcode02130",0
+"zipcode02131",0
+"zipcode02132",182.571995226168
+"zipcode02134",-63.2896833045571
+"zipcode02134-1704",0
+"zipcode02135",-1.89865695369705
+"zipcode02136",-181.181064232812
+"zipcode02138",1795.30523137232
+"zipcode02139",NA
+"zipcode02142",0
+"zipcode02143",0
+"zipcode02145",0
+"zipcode02150",-826.18247468128
+"zipcode02151",0
+"zipcode02152",0
+"zipcode02163",0
+"zipcode02186",NA
+"zipcode02199",0
+"zipcode02210",864.612588538516
+"zipcode02215",156.688303647546
+"zipcode02445",0
+"zipcode02446",0
+"zipcode02458",NA
+"zipcode02467",-155.997559787053
+"zipcode02472",0
+"latitude",10976.8251195804
+"longitude",9293.23208185996
+"is_location_exactt",0
+"property_typeBed & Breakfast",0
+"property_typeBoat",0
+"property_typeBoutique hotel",-947.941591282437
+"property_typeCondominium",36.1633361021851
+"property_typeDorm",0
+"property_typeGuest suite",0
+"property_typeGuesthouse",1359.60245707766
+"property_typeHostel",-4828.27827564013
+"property_typeHouse",0
+"property_typeIn-law",0
+"property_typeLoft",-161.772108111766
+"property_typeOther",37.6697104209058
+"property_typeServiced apartment",NA
+"property_typeTimeshare",NA
+"property_typeTownhouse",248.595646071762
+"property_typeVilla",0
+"room_typePrivate room",-146.736698802523
+"room_typeShared room",-503.007182127122
+"accommodates",2.97772430713586
+"bathrooms",86.966740131132
+"bedrooms",32.1357520160761
+"beds",0
+"bed_typeCouch",0
+"bed_typeFuton",-93.7229545824271
+"bed_typePull-out Sofa",0
+"bed_typeReal Bed",0
+"square_feet",0.000349538787821357
+"security_deposit",6.29834312821189e-05
+"cleaning_fee",0.0050483867792973
+"guests_included",0
+"extra_people",0
+"minimum_nights",0.060811080102802
+"maximum_nights",-1.86839834575716e-07
+"availability_30",0.159568568550652
+"availability_60",0
+"availability_90",0
+"availability_365",2.10601229006749e-05
+"number_of_reviews",-0.000297314804809292
+"first_review",-1.54712831840667e-05
+"last_review",0
+"review_scores_rating",0.105046147276618
+"review_scores_accuracy",0
+"review_scores_cleanliness",4.77083808952096
+"review_scores_checkin",0
+"review_scores_communication",0
+"review_scores_location",6.03130968754274
+"review_scores_value",-3.46747151253929
+"instant_bookablet",-14.5527071777528
+"is_business_travel_readyt",-28.6222875332717
+"cancellation_policymoderate",0
+"cancellation_policystrict",0
+"cancellation_policysuper_strict_30",0
+"cancellation_policysuper_strict_60",9933.80260200372
+"require_guest_profile_picturet",0
+"require_guest_phone_verificationt",133.906427199263
+"calculated_host_listings_count",-0.00366191411531295
+"reviews_per_month",-1.2409892959853

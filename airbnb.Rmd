@@ -160,6 +160,13 @@ yhat.test.lasso <- predict(fit.lasso, air.test_input, s = fit.lasso$lambda.min)
 rsq.test.lasso <- mean((air.test_output - yhat.test.lasso)^2)
 
 print(sprintf("Lasso: rsq %.2f and the prediction from the mean is %.2f", rsq.test.lasso, rsq.frommean))
+
+# save Lasso coefficients
+lasso.sds <- apply(air.train_input, 2, sd)
+lasso.coefs <- as.matrix(coef(fit.lasso, s = "lambda.min"))
+lasso.std_coefs <- lasso.coefs[-1, 1] / lasso.sds
+write.csv(as.data.frame(lasso.std_coefs),file="lasso_coefficients.csv")
+
 ```
 
 ## Elastic net
