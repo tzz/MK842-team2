@@ -165,8 +165,9 @@ print(sprintf("Lasso: rsq %.2f and the prediction from the mean is %.2f", rsq.te
 # save Lasso coefficients
 lasso.sds <- apply(air.train_input, 2, sd)
 lasso.coefs <- as.matrix(coef(fit.lasso, s = "lambda.min"))
-lasso.std_coefs <- lasso.coefs[-1, 1] / lasso.sds
-write.csv(as.data.frame(lasso.std_coefs),file="lasso_coefficients.csv")
+lasso.std_coefs <- lasso.coefs[-1, 1] * lasso.sds
+write.csv(as.data.frame(lasso.std_coefs),file="lasso_std_coefficients.csv")
+write.csv(as.data.frame(lasso.coefs),file="lasso_coefficients.csv")
 
 ```
 
