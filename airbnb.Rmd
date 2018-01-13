@@ -134,7 +134,8 @@ fit.lm <- lm(air_formula, atrain)
 
 yhat.test.lm <- predict(fit.lm)
 rsq.test.lm <- mean((air.test_output - yhat.test.lm)^2)
-rsq.test.lm
+
+print(sprintf("Linear Regression: rsq %.2f and the prediction from the mean is %.2f", rsq.test.lm, rsq.frommean))
 ```
 
 ## Ridge regression
