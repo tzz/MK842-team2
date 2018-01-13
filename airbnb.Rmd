@@ -187,7 +187,7 @@ print(sprintf("Random Forest: rsq %.2f and the prediction from the mean is %.2f"
 ```
 
 ## Boosted tree
-```{r}
+```{r boosting, message=FALSE, warning=FALSE}
 library(gbm)
 library(survival)
 library(lattice)
